@@ -1,0 +1,15 @@
+<footer class="site-footer h-card">
+    <div class="wrapper">
+        <div class="footer-cols">
+            <div class="footer-col social-links">
+                {%- if site.instagram_username -%}<a href="https://www.instagram.com/{{ site.instagram_username }}/" target="_blank" title="@{{ site.instagram_username }} on Instagram">{%- include svg/instagram.svg -%}</a>{%- endif -%}
+                {%- if site.twitter_username -%}<a href="https://twitter.com/{{ site.twitter_username }}" target="_blank" title="@{{ site.twitter_username }} on Twitter">{%- include svg/twitter.svg -%}</a>{%- endif -%}
+                {%- if site.github_username -%}<a href="https://github.com/{{ site.github_username }}" target="_blank" title="@{{ site.github_username }} on GitHub">{%- include svg/github.svg -%}</a>{%- endif -%}
+                {%- if site.openstreetmap_username -%}<a href="https://www.openstreetmap.org/user/{{ site.openstreetmap_username }}" target="_blank" title="{{ site.openstreetmap_username }} on OpenStreetMap">{%- include svg/openstreetmap.svg -%}</a>{%- endif -%}
+            </div>
+            <div class="footer-col">
+                <p>© 2020 – {{ "now" | date: "%Y" }} Quincy Morgan</p>
+            </div>
+        </div>
+    </div>
+</footer>

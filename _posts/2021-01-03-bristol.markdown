@@ -1,0 +1,12 @@
+---
+layout: post
+place: Bristol, Pennsylvania
+insta_id: CJlwXM9D00l
+tags: water, buildings
+image: 2021/bristol/grundy
+---
+
+{% include photo.html file="2021/bristol/grundy" %}
+
+The Grundy Mill Complex rising above the Bristol Lagoon along the Delaware Canal.
+Taken from the towpath where the canal passes beneath the Northeast Corridor 🚅

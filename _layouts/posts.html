@@ -1,0 +1,26 @@
+---
+layout: default
+---
+<div class="posts">
+  {{ content }}
+  {%- if paginator.posts.size > 0 -%}
+    <ul class="post-list">
+      {%- for post in paginator.posts -%}
+        {%- assign content = post.content -%}
+        {%- include article.html -%}
+      {%- endfor -%}
+    </ul>
+  {%- endif -%}
+</div>
+<div class="post-nav">
+    {%- if paginator.previous_page -%}
+        <a href="{{ paginator.previous_page_path }}" class="previous-post">← Newer Posts</a>
+    {%- else -%}
+        <span> </span>
+    {%- endif -%}
+    {%- if paginator.next_page -%}
+        <a href="{{ paginator.next_page_path }}" class="next-post">Older Posts →</a>
+    {%- else -%}
+        <span> </span>
+    {%- endif -%}
+</div>

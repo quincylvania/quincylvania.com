@@ -1,0 +1,8 @@
+---
+layout: default
+---
+{%- assign baseLength = page.relative_path | size | minus: 17 -%}
+{%- assign assetPath = page.relative_path | slice: 8, baseLength -%}
+<div class="photo-page">
+    <a href="/assets/photos/{{ assetPath }}.jpeg"><img class="photo main-photo" src="/assets/photos/{{ assetPath }}.jpeg"/></a>
+</div>

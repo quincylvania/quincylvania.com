@@ -1,0 +1,26 @@
+---
+layout: default
+---
+{%- assign post = page -%}
+{%- include article.html -%}
+<div class="post-nav">
+    {%- if page.previous -%}
+        {% comment %}
+        {%- assign firstPost = site.posts | last -%}
+        <a href="{{ firstPost.url | relative_url }}" class="first-post">↞ First</a>
+        {% endcomment %}
+        <a href="{{ page.previous.url | relative_url }}" class="previous-post">← Prior Post</a>
+    {%- else -%}
+        <span> </span>{% comment %}<span> </span>{% endcomment %}
+    {%- endif -%}
+
+    {%- if page.next -%}
+        <a href="{{ page.next.url | relative_url }}" class="next-post">Next Post →</a>
+        {% comment %}
+        {%- assign lastPost = site.posts | first -%}
+        <a href="{{ lastPost.url | relative_url }}" class="latest-post">Latest ↠</a>
+        {% endcomment %}
+    {%- else -%}
+        <span> </span>{% comment %}<span> </span>{% endcomment %}
+    {%- endif -%}
+</div>

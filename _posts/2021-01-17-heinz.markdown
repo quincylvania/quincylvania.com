@@ -1,0 +1,11 @@
+---
+layout: post
+place: Tinicum, Pennsylvania
+insta_id: CKKFK8xDASm
+tags: water, buildings
+image: 2021/heinz/skyline
+---
+
+{% include photo.html file="2021/heinz/skyline" %}
+
+The Philadelphia city skyline far beyond the tidal mudflats at John Heinz National Wildlife Refuge.

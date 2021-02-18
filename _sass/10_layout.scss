@@ -1,0 +1,258 @@
+/* document */
+
+html, html * {
+    box-sizing: border-box;
+}
+
+body {
+    background: white;
+    font-family: "Vollkorn", Georgia, serif;
+    font-size: 20px;
+    font-variant-numeric: lining-nums;
+    font-feature-settings: 'case'; /* Case-Sensitive Forms */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    line-height: 1.4;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    min-height: 100vh;
+}
+
+/* elements */
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+a:active,
+a:focus {
+    text-decoration: underline;
+}
+@media(hover) {
+    a:hover {
+        text-decoration: underline;
+    }
+}
+.bodier a {
+    color: $accent-color;
+}
+
+h1 {
+    font-size: 1.6em;
+}
+h2 {
+    font-size: 1.3em;
+}
+
+code {
+    font-size: 0.8em;
+    background: #eee;
+    padding: 2px 4px;
+    line-height: 1;
+}
+.highlight code {
+    padding: 0;
+}
+.highlight {
+    background: #eee;
+}
+figure.highlight, div.highlight {
+    padding: 5px 10px;
+}
+
+.wrapper {
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    max-width: 1500px;
+}
+
+/* header */
+
+header.site-header {
+    background: black;
+    color: white;
+    position: relative;
+    padding: 5px 0;
+}
+
+header.site-header .wrapper {
+    /*
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    */
+    text-align: center;
+}
+.site-title {
+    font-weight: 800;
+}
+
+/* footer */
+
+footer.site-footer {
+    background: black;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 18px;
+}
+
+footer.site-footer .footer-cols {
+    display: flex;
+    justify-content: space-between;
+}
+footer.site-footer .social-links a {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+/* main content */
+
+main.page-content {
+    position: relative;
+    flex: 1 0 auto;
+}
+
+/* posts */
+
+article.post {
+    position: relative;
+}
+
+.post-header .post-date {
+    white-space: nowrap;
+    color: inherit;
+    font-weight: bold;
+    font-style: italic;
+}
+.post-header .post-place {
+    font-style: italic;
+}
+
+.post-header .meta-icons {
+    margin-top: -1.2em;
+    position: absolute;
+    right: 0;
+}
+svg.icon {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+}
+.post-header .meta-icons a {
+    opacity: 0.6;
+}
+.post-header .meta-icons a:active,
+.post-header .meta-icons a:focus {
+    opacity: 1;
+}
+@media (hover) {
+    .post-header .meta-icons a:hover {
+        opacity: 1;
+    }
+}
+
+article.post .post-header {
+    text-align: center;
+    min-width: 250px;
+    padding-top: 1em;
+}
+article.post .post-content {
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+article.post .post-content p {
+    max-width: 35em;
+    text-align: justify;
+}
+article.post .post-content blockquote {
+    max-width: 34.25em;
+    padding-left: 0.75em;
+    margin-left: 0.75em;
+    color: #666;
+    border-left: 2px solid #ccc;
+}
+.post-content p,
+.post-content ol,
+.post-content ul,
+.post-content blockquote,
+.post-content figure,
+.post-content div.highlight {
+    margin-bottom: 1em;
+}
+article ol, article ul {
+    list-style-position: inside;
+}
+
+article .post-content figure.photo-wrap {
+    display: inline-block;
+    width: 100%;
+    position: relative;
+    text-align: center;
+}
+.post-content img.photo {
+    max-height: 96vh;
+    max-width: 100%;
+    vertical-align: bottom;
+}
+
+@media (min-width: 900px) {
+    .post-list {
+        display: table;
+    }
+    article.post {
+        display: table-row;
+    }
+    article.post .post-header,
+    article.post .post-content {
+        display: table-cell;
+        vertical-align: top;
+    }
+    article.post .post-header {
+        max-width: 15em;
+        text-align: right;
+        padding-right: 1em;
+    }
+    article .post-content figure.photo-wrap {
+        text-align: inherit;
+        width: auto;
+    }
+    .post-header .meta-icons {
+        position: unset;
+        margin-top: 2em;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.post-nav {
+    margin-bottom: 2em;
+    text-align: right;
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+.post-nav:empty {
+    display: none;
+}
+.post-nav a {
+    color: inherit;
+    font-weight: bold;
+    font-style: italic;
+
+}
+
+/* photo page*/
+
+.photo-page {
+    text-align: center;
+}
+.photo-page img.main-photo {
+    max-width: 100%;
+    max-height: 96vh;
+    margin: 1em auto;
+}

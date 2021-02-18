@@ -1,0 +1,25 @@
+<article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+    <header class="post-header">
+        <a class="post-date" href="{{ post.url | relative_url }}">
+            <time class="dt-published" datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">
+                {{ post.date | date: site.date_format }}
+            </time>
+        </a>
+        {%- if post.place -%}
+            {% assign place = site.places[post.place] %}
+            {% assign showPlace = place and place.lat and place.lon %}
+            {%- if showPlace -%}<a href="https://www.openstreetmap.org/#map=15/{{ place.lat }}/{{ place.lon }}" target="_blank" title="Explore on the map">{%- endif -%}
+                <p class="post-place">{{ post.place }}</p>
+            {%- if showPlace -%}</a>{%- endif -%}
+        {%- endif -%}
+        {%- if post.insta_id or post.twitter_id -%}
+            <div class="meta-icons">
+                {%- if post.insta_id -%}<a href="https://www.instagram.com/p/{{ post.insta_id }}/" target="_blank" title="View this on Instagram">{%- include svg/instagram.svg -%}</a>{%- endif -%}
+                {%- if post.twitter_id -%}<a href="https://twitter.com/quincylvania/status/{{ post.twitter_id }}" target="_blank" title="View this on Twitter">{%- include svg/twitter.svg -%}</a>{%- endif -%}
+            </div>
+        {%- endif -%}
+    </header>
+    <div class="post-content e-content" itemprop="articleBody">
+        {{ content }}
+    </div>
+</article>
