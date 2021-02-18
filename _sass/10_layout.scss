@@ -101,6 +101,7 @@ footer.site-footer {
 
 footer.site-footer .footer-cols {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
 }
 footer.site-footer .social-links a {
@@ -225,6 +226,9 @@ article .post-content figure.photo-wrap {
         margin-top: 2em;
         display: flex;
         flex-direction: column;
+    }
+    footer.site-footer .footer-cols {
+        flex-direction: row;
     }
 }
 
