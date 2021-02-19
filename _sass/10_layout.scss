@@ -242,6 +242,11 @@ article .post-content figure.photo-wrap {
         margin-bottom: 0;
     }
 }
+@media (max-width: 600px) {
+    article .post-content {
+        font-size: 18px;
+    }
+}
 
 .post-nav {
     margin-bottom: 2em;
