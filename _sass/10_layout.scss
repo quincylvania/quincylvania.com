@@ -103,10 +103,18 @@ footer.site-footer .footer-cols {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: center;
 }
-footer.site-footer .links a {
-    display: inline-block;
+footer.site-footer .links {
+    display: flex;
+    margin-bottom: 10px;
+}
+footer.site-footer .links a:not(:last-child) {
     margin-right: 10px;
+}
+footer.site-footer .links a,
+footer.site-footer .links a svg.icon {
+    display: block;
 }
 
 /* main content */
@@ -229,6 +237,9 @@ article .post-content figure.photo-wrap {
     }
     footer.site-footer .footer-cols {
         flex-direction: row;
+    }
+    footer.site-footer .footer-cols .links {
+        margin-bottom: 0;
     }
 }
 
