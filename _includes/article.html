@@ -14,8 +14,8 @@
         {%- endif -%}
         {%- if post.insta_id or post.twitter_id -%}
             <div class="meta-icons">
-                {%- if post.insta_id -%}<a href="https://www.instagram.com/p/{{ post.insta_id }}/" target="_blank" title="View this on Instagram">{%- include svg/instagram.svg -%}</a>{%- endif -%}
-                {%- if post.twitter_id -%}<a href="https://twitter.com/quincylvania/status/{{ post.twitter_id }}" target="_blank" title="View this on Twitter">{%- include svg/twitter.svg -%}</a>{%- endif -%}
+                {%- if post.insta_id -%}<a href="https://www.instagram.com/p/{{ post.insta_id }}/" target="_blank" title="View this on Instagram">{% include icon.html id="instagram" %}</a>{%- endif -%}
+                {%- if post.twitter_id -%}<a href="https://twitter.com/quincylvania/status/{{ post.twitter_id }}" target="_blank" title="View this on Twitter">{% include icon.html id="twitter" %}</a>{%- endif -%}
             </div>
         {%- endif -%}
     </header>

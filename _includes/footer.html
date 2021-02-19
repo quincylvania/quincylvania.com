@@ -2,11 +2,11 @@
     <div class="wrapper">
         <div class="footer-cols">
             <div class="footer-col links">
-                {%- if site.instagram_username -%}<a href="https://www.instagram.com/{{ site.instagram_username }}/" target="_blank" title="@{{ site.instagram_username }} on Instagram">{%- include svg/instagram.svg -%}</a>{%- endif -%}
-                {%- if site.twitter_username -%}<a href="https://twitter.com/{{ site.twitter_username }}" target="_blank" title="@{{ site.twitter_username }} on Twitter">{%- include svg/twitter.svg -%}</a>{%- endif -%}
-                {%- if site.github_username -%}<a href="https://github.com/{{ site.github_username }}" target="_blank" title="@{{ site.github_username }} on GitHub">{%- include svg/github.svg -%}</a>{%- endif -%}
-                {%- if site.openstreetmap_username -%}<a href="https://www.openstreetmap.org/user/{{ site.openstreetmap_username }}" target="_blank" title="{{ site.openstreetmap_username }} on OpenStreetMap">{%- include svg/openstreetmap.svg -%}</a>{%- endif -%}
-                {%- if site.email -%}<a href="mailto:{{ site.email }}" target="_blank" title="Email {{ site.email }}">{%- include svg/mail.svg -%}</a>{%- endif -%}
+                {%- if site.instagram_username -%}<a href="https://www.instagram.com/{{ site.instagram_username }}/" target="_blank" title="@{{ site.instagram_username }} on Instagram">{% include icon.html id="instagram" %}</a>{%- endif -%}
+                {%- if site.twitter_username -%}<a href="https://twitter.com/{{ site.twitter_username }}" target="_blank" title="@{{ site.twitter_username }} on Twitter">{% include icon.html id="twitter" %}</a>{%- endif -%}
+                {%- if site.github_username -%}<a href="https://github.com/{{ site.github_username }}" target="_blank" title="@{{ site.github_username }} on GitHub">{% include icon.html id="github" %}</a>{%- endif -%}
+                {%- if site.openstreetmap_username -%}<a href="https://www.openstreetmap.org/user/{{ site.openstreetmap_username }}" target="_blank" title="{{ site.openstreetmap_username }} on OpenStreetMap">{% include icon.html id="openstreetmap" %}</a>{%- endif -%}
+                {%- if site.email -%}<a href="mailto:{{ site.email }}" target="_blank" title="Email {{ site.email }}">{% include icon.html id="email" %}</a>{%- endif -%}
             </div>
             <div class="footer-col">
                 <p>© 2020 – {{ "now" | date: "%Y" }} Quincy Morgan</p>
