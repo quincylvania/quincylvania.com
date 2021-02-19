@@ -21,6 +21,12 @@
         {% if page.description %}
             <meta name="description" content="{{ page.description }}">
             <meta property="og:description" content="{{ page.description }}">
+        {% elsif page.content %}
+            {% assign desc = page.content | strip_html | strip | newline_to_br | split: "<br />" | first %}
+            {% if desc %}
+                <meta name="description" content="{{ desc }}">
+                <meta property="og:description" content="{{ desc }}">
+            {% endif %}
         {% endif %}
     {% else %}
         <title>{{ site.title }}: {{ site.tagline }}</title>
