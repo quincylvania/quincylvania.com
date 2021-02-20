@@ -37,6 +37,11 @@
     {% endif %}
     {% if page.image %}
         <meta property="og:image" content="{{ '/assets/photos/' | append: page.image | append: '.jpeg' | absolute_url }}">
+    {% elsif page.layout == 'posts' %}
+        {%- assign latestPost = site.posts | first -%}
+        {% if latestPost.image %}
+            <meta property="og:image" content="{{ '/assets/photos/' | append: latestPost.image | append: '.jpeg' | absolute_url }}">
+        {% endif %}
     {% endif %}
     <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
     <link rel="apple-touch-icon" sizes="180x180" href="{{ "/assets/favicons/apple-touch-icon.png" | relative_url }}">
